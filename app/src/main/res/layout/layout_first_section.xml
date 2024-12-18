@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+<data>
+    <variable
+            name="model"
+            type="com.ibt.ava.service.model.news.home.Data" />
+</data>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:background="#290038"
+            android:orientation="vertical">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rec_stories"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:orientation="horizontal"
+                    android:layoutDirection="rtl"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/layout_stories_row"></androidx.recyclerview.widget.RecyclerView>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/layout_first_screen_body"
+                    android:paddingStart="@dimen/base_padding_left"
+                    android:paddingEnd="@dimen/base_padding_right"
+                    android:paddingTop="@dimen/base_padding_top"
+                    android:paddingBottom="@dimen/base_padding_bottom">
+
+
+                <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|end"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:scaleType="fitCenter"
+                        app:cardBackgroundColor="#3e045a"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        app:cardCornerRadius="@dimen/_30sdp"
+                        app:cardElevation="0dp"
+                        app:cardUseCompatPadding="false">
+
+                    <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginEnd="@dimen/_2sdp"
+                            android:orientation="horizontal">
+
+                        <TextView
+                                android:id="@+id/tv_first_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/opensans_regular"
+                                android:padding="@dimen/_5sdp"
+                               android:text="هه‌واڵی به‌ په‌له‌"
+                                android:textColor="@color/home_top_weather_text"
+                                android:textSize="@dimen/normal_top_first_title_size"></TextView>
+
+                        <ImageView
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_gravity="center"
+                                android:id="@+id/radar"
+                                android:layout_marginEnd="@dimen/_4sdp"
+                                android:src="@drawable/radar_first"></ImageView>
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:id="@+id/btn_first_news"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:id="@+id/tv_first_title"
+                            android:fontFamily="@font/opensans_semibold"
+                            android:textColor="#ffffff"
+
+                            android:textSize="@dimen/normal_title_size"></TextView>
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:orientation="horizontal">
+
+                        <ImageButton
+                                android:layout_width="@dimen/normal_dot_size_width"
+                                android:layout_height="@dimen/normal_dot_size_height"
+                                android:background="?attr/selectableItemBackground"
+                                android:scaleType="centerCrop"
+                                android:layout_gravity="center"
+                                android:visibility="gone"
+                                android:src="@drawable/dots"></ImageButton>
+
+                        <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:layout_gravity="center"
+                                android:gravity="end">
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginEnd="@dimen/_7sdp"
+                                    android:id="@+id/tv_first_time"
+                                    android:fontFamily="@font/opensans_regular"
+                                    android:textColor="#ededed"
+                                    android:textSize="@dimen/normal_time_size"></TextView>
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/opensans_semibold"
+                                    android:text="هەواڵ"
+                                    android:visibility="gone"
+                                    android:textColor="#ffffff"
+                                    android:textSize="@dimen/_12sdp"></TextView>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        app:cardBackgroundColor="@color/transparent"
+                        app:cardCornerRadius="@dimen/_9sdp"
+                        android:layout_marginBottom="@dimen/_15sdp"
+                        app:cardElevation="0dp"
+                        app:cardPreventCornerOverlap="false">
+
+                    <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/image_news_first"
+                            android:adjustViewBounds="true"></ImageView>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rec"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/layout_first_row"></androidx.recyclerview.widget.RecyclerView>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

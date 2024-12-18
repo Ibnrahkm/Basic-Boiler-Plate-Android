@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+                name="model"
+                type="com.ibt.ava.service.model.news.home.Data" />
+    </data>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:fillViewport="true"
+            android:id="@+id/layout_eight_screen_body"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/base_padding_top"
+            android:paddingBottom="@dimen/base_padding_bottom">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:paddingStart="@dimen/base_padding_left"
+                    android:paddingEnd="@dimen/base_padding_right"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_weight="1.0"
+                        android:src="@drawable/scoop_line"></ImageView>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans_semibold"
+                        android:text="جیهان"
+                        android:id="@+id/btn_eight_section"
+                        android:textColor="#041443"
+                        android:textSize="@dimen/normal_top_title_size"></TextView>
+            </LinearLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="2"
+                    tools:itemCount="2"
+                    android:paddingStart="@dimen/_3sdp"
+                    android:paddingEnd="@dimen/_3sdp"
+                    android:id="@+id/rec1"
+                    android:layoutDirection="rtl"
+                    tools:listitem="@layout/layout_third_tab_data_row"></androidx.recyclerview.widget.RecyclerView>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:background="#f4f4f4"></View>
+            <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/rec2"
+                    android:paddingStart="@dimen/base_padding_left"
+                    android:layout_marginBottom="@dimen/_15sdp"
+                    android:paddingEnd="@dimen/base_padding_right"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/layout_fifth_row"></androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

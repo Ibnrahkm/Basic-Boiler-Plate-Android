@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+                name="model"
+                type="com.ibt.ava.service.model.news.home.Data" />
+    </data>
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_460sdp"
+            android:layout_marginBottom="@dimen/_60sdp"
+            android:background="@drawable/home_screen_weather"
+            android:paddingStart="@dimen/base_padding_left"
+            android:paddingEnd="@dimen/base_padding_right"
+            android:paddingTop="@dimen/base_padding_top"
+            android:paddingBottom="@dimen/base_padding_bottom">
+
+
+        <LinearLayout
+                android:id="@+id/abc"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_110sdp"
+                android:background="@drawable/weather_top_bg"
+                android:orientation="horizontal">
+
+            <ImageView
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_gravity="center"
+                    android:id="@+id/iv_current"
+                    android:layout_marginStart="@dimen/_15sdp"></ImageView>
+
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:layout_weight="1.0"
+                    android:gravity="end"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans_regular"
+                        android:text="ئێستا"
+                        android:textColor="#d8dfe8"
+                        android:textSize="@dimen/_14sdp"></TextView>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans_semibold"
+                        android:text=" پلەی سەدی"
+                        android:id="@+id/tv_now"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/_20sdp"></TextView>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans_regular"
+                        android:text="کەشوهەوای ناوخۆیی خۆت"
+                        android:textColor="#d8dfe8"
+                        android:textSize="@dimen/_14sdp"></TextView>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/abc"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:orientation="horizontal">
+
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans_regular"
+                        android:text="شەمە"
+                        android:id="@+id/tv_first_time"
+                        android:textColor="#d8dfe8"
+                        android:textSize="@dimen/_10sdp"></TextView>
+
+                <ImageView
+                        android:layout_width="@dimen/_34sdp"
+                        android:layout_height="@dimen/_34sdp"
+                        android:id="@+id/iv_first"></ImageView>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans_semibold"
+
+                        android:id="@+id/tv_satureday"
+                        android:textColor="#d8dfe8"
+                        android:textSize="@dimen/_14sdp"></TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_weight="1.0"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans_regular"
+                        android:text="یەک شەمە"
+                        android:id="@+id/tv_second_time"
+                        android:textColor="#d8dfe8"
+                        android:textSize="@dimen/_10sdp"></TextView>
+
+                <ImageView
+                        android:layout_width="@dimen/_34sdp"
+                        android:layout_height="@dimen/_34sdp"
+                        android:id="@+id/iv_second"
+                        ></ImageView>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans_semibold"
+
+                        android:id="@+id/tv_sunday"
+                        android:textColor="#d8dfe8"
+                        android:textSize="@dimen/_14sdp"></TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans_regular"
+                        android:text="دوو شەمە"
+                        android:id="@+id/tv_third_time"
+                        android:textColor="#d8dfe8"
+                        android:textSize="@dimen/_10sdp"></TextView>
+
+                <ImageView
+                        android:layout_width="@dimen/_34sdp"
+                        android:layout_height="@dimen/_34sdp"
+                        android:id="@+id/iv_third"></ImageView>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans_semibold"
+
+                        android:id="@+id/tv_monday"
+                        android:textColor="#d8dfe8"
+                        android:textSize="@dimen/_14sdp"></TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans_regular"
+                        android:text="سێ شەمە"
+                        android:id="@+id/tv_fourth_time"
+                        android:textColor="#d8dfe8"
+                        android:textSize="@dimen/_10sdp"></TextView>
+
+                <ImageView
+                        android:layout_width="@dimen/_34sdp"
+                        android:layout_height="@dimen/_34sdp"
+                        android:id="@+id/iv_fourth"></ImageView>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans_semibold"
+
+                        android:id="@+id/tv_tuesday"
+                        android:textColor="#d8dfe8"
+                        android:textSize="@dimen/_14sdp"></TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_weight="1.0"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans_regular"
+                        android:text="چوار شەمە"
+                        android:id="@+id/tv_fifth_time"
+                        android:textColor="#d8dfe8"
+                        android:textSize="@dimen/_10sdp"></TextView>
+
+                <ImageView
+                        android:layout_width="@dimen/_34sdp"
+                        android:layout_height="@dimen/_34sdp"
+                        android:id="@+id/iv_fifth"></ImageView>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans_semibold"
+
+                        android:id="@+id/tv_wesnesday"
+                        android:textColor="#d8dfe8"
+                        android:textSize="@dimen/_14sdp"></TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1.0"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans_regular"
+                        android:text="پێنج شەمە"
+                        android:textColor="#d8dfe8"
+                        android:id="@+id/tv_sixth_time"
+                        android:textSize="@dimen/_10sdp"></TextView>
+
+                <ImageView
+                        android:layout_width="@dimen/_34sdp"
+                        android:id="@+id/iv_sixth"
+                        android:layout_height="@dimen/_34sdp"></ImageView>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans_semibold"
+                        android:id="@+id/tv_thurday"
+                        android:textColor="#d8dfe8"
+                        android:textSize="@dimen/_14sdp"></TextView>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+                android:layout_width="@dimen/_220sdp"
+                android:layout_height="@dimen/_200sdp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/weather_person"></ImageView>
+    </RelativeLayout>
+</layout>

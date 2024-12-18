@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+                name="model"
+                type="com.ibt.ava.service.model.ShowcaseModel" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <ImageView
+                android:id="@+id/image_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                app:src="@{model.imageUrl}" />
+
+        <LinearLayout
+                android:id="@+id/layout_to_hide"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="vertical">
+
+            <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:text="@{model.title}"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/_15sdp"></TextView>
+
+            <View
+                    android:id="@+id/view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:background="#1b3066"></View>
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

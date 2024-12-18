@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+                name="model"
+                type="com.ibt.ava.service.model.news.home.Featurednews" />
+    </data>
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_200sdp"
+            app:cardElevation="0dp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            app:cardCornerRadius="@dimen/_12sdp">
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_100sdp"
+                        android:scaleType="centerCrop"
+                        app:src="@{model.featuredImageUrl}"></ImageView>
+
+                <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_100sdp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/shadow_video"></ImageView>
+            </FrameLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/video_text_bg"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_10sdp">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans_semibold"
+                        android:text="@{model.title}"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/list_vertical_title_size"></TextView>
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|end"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:fontFamily="@font/opensans_regular"
+                        android:text="@{model.publishedAt}"
+                        android:textColor="#ededed"
+                        android:textSize="@dimen/list_vertical_time_size"></TextView>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_gravity="center|top|start"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ava"></ImageView>
+
+        <ImageButton
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_gravity="center"
+                android:id="@+id/btn_play"
+                android:layout_marginBottom="@dimen/_50sdp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="fitCenter"
+                android:src="@drawable/play_button"></ImageButton>
+    </androidx.cardview.widget.CardView>
+</layout>

@@ -1,6 +1,54 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="edit_text_header_size">@dimen/_15sdp</dimen>
-    <dimen name="edit_text_size">@dimen/_12sdp</dimen>
+    <dimen name="edit_text_size">@dimen/_10sdp</dimen>
+    <dimen name="tx_detail_title_text_size">@dimen/_12sdp</dimen>
+    <dimen name="tx_detail_detail_text_size">@dimen/_10sdp</dimen>
+
     <dimen name="btn_text_size">@dimen/_14sdp</dimen>
+    <dimen name="base_margin">@dimen/_15sdp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">@dimen/_8sdp</dimen>
+    <dimen name="activity_vertical_margin">@dimen/_8sdp</dimen>
+    <dimen name="nav_header_vertical_spacing">@dimen/_5sdp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="default_corner_radius">@dimen/_22sdp</dimen>
+
+
+    <dimen name="normal_title_size">@dimen/_17sdp</dimen>
+    <dimen name="normal_time_size">@dimen/_11sdp</dimen>
+    <dimen name="normal_category_size">@dimen/_11sdp</dimen>
+    <dimen name="normal_dot_size_width">@dimen/_20sdp</dimen>
+    <dimen name="normal_dot_size_height">@dimen/_20sdp</dimen>
+    <dimen name="normal_top_title_size">@dimen/_18sdp</dimen>
+    <dimen name="normal_top_first_title_size">@dimen/_14sdp</dimen>
+    <dimen name="list_vertical_title_size">@dimen/_14sdp</dimen>
+    <dimen name="list_vertical_time_size">@dimen/_12sdp</dimen>
+    <dimen name="list_vertical_category_size">@dimen/_12sdp</dimen>
+    <dimen name="list_vertical_dot_width">@dimen/_10sdp</dimen>
+    <dimen name="list_vertical_dot_height">@dimen/_20sdp</dimen>
+    <dimen name="list_vertical_image_width">@dimen/_70sdp</dimen>
+    <dimen name="list_vertical_image_height">@dimen/_70sdp</dimen>
+    <dimen name="normal_author_image_width">@dimen/_22sdp</dimen>
+    <dimen name="normal_author_image_height">@dimen/_22sdp</dimen>
+    <dimen name="normal_author_size">@dimen/_14sdp</dimen>
+
+    <dimen name="normal_author_image_original_width">@dimen/_30sdp</dimen>
+    <dimen name="normal_author_image_original_height">@dimen/_30sdp</dimen>
+    <dimen name="list_author_image_width">@dimen/_22sdp</dimen>
+    <dimen name="list_author_image_height">@dimen/_22sdp</dimen>
+    <dimen name="list_author_size">@dimen/_12sdp</dimen>
+    <dimen name="list_author_time_size">@dimen/_12sdp</dimen>
+    <dimen name="list_horizontal_time_size">@dimen/_11sdp</dimen>
+    <dimen name="list_horizontal_category_size">@dimen/_11sdp</dimen>
+    <dimen name="single_news_title_size">@dimen/_19sdp</dimen>
+    <dimen name="single_news_time_size">@dimen/_12sdp</dimen>
+    <dimen name="single_news_category_size">@dimen/_12sdp</dimen>
+    <dimen name="single_news_followup_size">@dimen/_14sdp</dimen>
+    <dimen name="base_padding_left">@dimen/_10sdp</dimen>
+    <dimen name="base_padding_right">@dimen/_10sdp</dimen>
+    <dimen name="base_padding_top">@dimen/_15sdp</dimen>
+    <dimen name="base_padding_bottom">@dimen/_5sdp</dimen>
+
+
 </resources>

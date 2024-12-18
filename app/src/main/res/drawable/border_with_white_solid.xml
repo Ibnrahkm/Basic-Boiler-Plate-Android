@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+<item>
+    <shape>
+        <stroke
+                android:width="1dp"
+                android:color="#d9d9d9"></stroke>
+        <solid android:color="#f0f0f0"></solid>
+        <padding android:bottom="3dp" android:left="3dp" android:right="3dp" android:top="3dp" />
+        <corners android:radius="@dimen/_10sdp"></corners>
+    </shape>
+</item>
+<item>
+    <bitmap android:tint="@android:color/black"
+            android:gravity="end"
+            android:src="@drawable/ic_arrow" />
+</item>
+</layer-list>

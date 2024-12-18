@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+                name="model"
+                type="com.ibt.ava.service.model.podcastchannels.Datum" />
+    </data>
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150sdp"
+            android:layout_margin="@dimen/_5sdp"
+            app:cardCornerRadius="@dimen/_12sdp"
+            app:cardElevation="0dp">
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_70sdp"
+                        android:scaleType="centerCrop"
+                        app:src="@{model.featuredImageUrl}"></ImageView>
+
+                <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_70sdp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/shadow_video"></ImageView>
+            </FrameLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/video_text_bg"
+                    android:orientation="vertical">
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/_7sdp"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingEnd="@dimen/_7sdp"
+                        android:paddingBottom="@dimen/_3sdp">
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_7sdp"
+                            android:fontFamily="@font/opensans_semibold"
+                            android:maxLines="2"
+                            android:text="@{model.channelCategory.name}"
+                            android:textColor="#1372FF"
+                            android:textSize="@dimen/_10sdp"></TextView>
+
+
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|start"
+                            android:fontFamily="@font/opensans_regular"
+                            android:text="@{model.podcastCount.toString().concat(` پۆدکاست`)}"
+                            android:textColor="#8897AE"
+                            android:textSize="@dimen/_10sdp"></TextView>
+
+                        </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_7sdp">
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/opensans_semibold"
+                            android:maxLines="2"
+                            android:ellipsize="end"
+                            android:text="@{model.name}"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/_12sdp"></TextView>
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <ImageButton
+                android:id="@+id/btn_play"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_gravity="center|end"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="fitCenter"
+                android:src="@drawable/mic"></ImageButton>
+    </androidx.cardview.widget.CardView>
+</layout>

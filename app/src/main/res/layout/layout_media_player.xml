@@ -1,0 +1,40 @@
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:background="#000000"
+            android:layout_height="match_parent">
+
+        <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <androidx.media3.ui.PlayerView
+                    android:id="@+id/player_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#000000"
+                    app:bar_gravity="bottom"
+                    app:default_artwork="@drawable/artwark"
+                    app:hide_on_touch="false"
+                    app:use_artwork="true"
+                    app:resize_mode="fit"
+                    app:use_controller="true" />
+
+            <ImageButton
+                    android:layout_width="@dimen/_21sdp"
+                    android:layout_height="@dimen/_21sdp"
+                    android:layout_gravity="center|top|start"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:layout_margin="@dimen/_15sdp"
+                    android:scaleType="fitCenter"
+                    android:id="@+id/btn_dismiss"
+                    android:src="@drawable/cross_black"
+                    app:tint="#ffffff"></ImageButton>
+        </FrameLayout>
+
+
+    </RelativeLayout>
+</layout>

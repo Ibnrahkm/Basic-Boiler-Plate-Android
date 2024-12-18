@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#000000"
+            android:fillViewport="true"
+            android:fitsSystemWindows="true"
+            android:orientation="vertical">
+
+
+        <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#000000"
+                android:fitsSystemWindows="true"
+                android:gravity="center"
+                android:theme="@style/AppTheme.AppBarOverlay"
+                app:elevation="0dp">
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:background="#000000">
+
+            <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"></ImageView>
+
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/abb"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/story_top_shadow"></ImageView>
+
+            <LinearLayout
+                    android:id="@+id/abb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:background="#000"
+                    android:orientation="vertical">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:layout_marginBottom="@dimen/_15sdp"
+                        android:orientation="horizontal">
+
+                    <ImageButton
+                            android:id="@+id/btn_cancel"
+                            android:layout_width="@dimen/_21sdp"
+                            android:layout_height="@dimen/_21sdp"
+                            android:layout_gravity="center"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/cross_black"
+                            app:tint="#ffffff"></ImageButton>
+
+                    <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0"
+                            android:gravity="end|center"
+                            android:orientation="horizontal">
+
+                        <TextView
+                                android:id="@+id/tv_first_author_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|end"
+                                android:layout_marginStart="@dimen/_7sdp"
+                                android:layout_marginEnd="@dimen/_7sdp"
+                                android:fontFamily="@font/opensans_semibold"
+                                android:gravity="center|end"
+                                android:textColor="#ffffff"
+                                android:textSize="@dimen/_16sdp"></TextView>
+
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/iv_author"
+                                android:layout_width="@dimen/_35sdp"
+                                android:layout_height="@dimen/_35sdp"
+                                app:civ_border_width="@dimen/_1sdp"
+                                app:civ_border_color="#ffffff"
+                                android:background="?attr/selectableItemBackground"
+                                android:src="@drawable/ava_link"></de.hdodenhof.circleimageview.CircleImageView>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/abcd"
+                    android:adjustViewBounds="true"
+                    android:rotation="180"
+                    android:src="@drawable/story_top_shadow"></ImageView>
+
+            <LinearLayout
+                    android:id="@+id/abcd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="#000"
+                    android:orientation="vertical"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_20sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_20sdp">
+
+                <TextView
+                        android:id="@+id/tv_first_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/opensans_semibold"
+                        android:maxLines="2"
+                        android:text="سەرۆکوەزیران بارزانی سەنتەری ئیگڵ پۆست لە هەولێر دەکاتەوە"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/normal_title_size"></TextView>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:orientation="horizontal">
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="end">
+
+                        <TextView
+                                android:id="@+id/tv_first_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginEnd="@dimen/_7sdp"
+                                android:fontFamily="@font/opensans_regular"
+                                android:text="10 خولەک خوێندنەوە"
+                                android:textColor="#8897AE"
+                                android:textSize="@dimen/normal_time_size"
+                                android:visibility="gone"></TextView>
+
+                        <TextView
+                                android:id="@+id/tv_first_category"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/opensans_semibold"
+                                android:maxLines="1"
+                                android:text="هەواڵ"
+                                android:textColor="#ffffff"
+                                android:textSize="@dimen/normal_category_size"
+                                android:visibility="gone"></TextView>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <!--below is the image view where we will
+                be displaying images in our stories-->
+
+            <!--on below line we are creating
+                linear layout for our views-->
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/abcd"
+                    android:layout_below="@+id/abb"
+                    android:orientation="horizontal">
+
+                <!--view to handle move to previous image-->
+                <View
+                        android:id="@+id/reverse"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                <!--view to move to the next image-->
+                <View
+                        android:id="@+id/skip"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <!--below widget is use to create indicator for our stories at top-->
+            <jp.shts.android.storiesprogressview.StoriesProgressView
+                    android:id="@+id/stories"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_3sdp"
+                    android:layout_gravity="top"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layoutDirection="rtl"
+                    android:paddingLeft="@dimen/_8sdp"
+                    android:paddingRight="@dimen/_8sdp" />
+
+        </RelativeLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

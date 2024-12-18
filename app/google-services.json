@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1062969684176",
+    "project_id": "avanews-b8a7c",
+    "storage_bucket": "avanews-b8a7c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1062969684176:android:8a695bca3f73af4eda2ed5",
+        "android_client_info": {
+          "package_name": "com.ibt.ava"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8L4hoD5lM7lsM1KrXFHMx5ZjpHrhwfwE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

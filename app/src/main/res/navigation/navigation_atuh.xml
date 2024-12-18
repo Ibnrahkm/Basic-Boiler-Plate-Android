@@ -1,33 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/navigation_atuh"
+        app:startDestination="@+id/loginFragment">
+    <fragment
+            android:id="@+id/loginFragment"
+            android:name="com.ibt.ava.view.ui.fragment.LoginFragment"
+            android:label="LoginFragment"
+            tools:layout="@layout/layout_login">
+        <action
+                android:id="@+id/action_loginFragment_to_signupFragment"
+                app:destination="@id/signupFragment"
+                app:enterAnim="@anim/slide_up"
+                app:exitAnim="@anim/slide_down"
+                app:popEnterAnim="@anim/slide_up"
+                app:popExitAnim="@anim/slide_down" />
+        <action
+                android:id="@+id/action_loginFragment_to_emailVerificationFragment"
+                app:destination="@id/emailVerificationFragment"
+                app:enterAnim="@anim/slide_up"
+                app:exitAnim="@anim/slide_down"
+                app:popEnterAnim="@anim/slide_up"
+                app:popExitAnim="@anim/slide_down" />
+        <action
+                android:id="@+id/action_loginFragment_to_forgotPassword"
+                app:destination="@id/forgotPassword" />
+    </fragment>
+    <fragment
+            android:id="@+id/signupFragment"
+            android:name="com.ibt.ava.view.ui.fragment.SignupFragment"
+            android:label="SignupFragment"
+            tools:layout="@layout/layout_signup">
+        <action
+                android:id="@+id/action_signupFragment_to_loginFragment"
+                app:destination="@id/loginFragment"
+                app:enterAnim="@anim/slide_up"
+                app:exitAnim="@anim/slide_down"
+                app:popEnterAnim="@anim/slide_up"
+                app:popExitAnim="@anim/slide_down" />
+        <action
+                android:id="@+id/action_signupFragment_to_emailVerificationFragment"
+                app:destination="@id/emailVerificationFragment"
+                app:enterAnim="@anim/slide_up"
+                app:exitAnim="@anim/slide_down"
+                app:popEnterAnim="@anim/slide_up"
+                app:popExitAnim="@anim/slide_down" />
+    </fragment>
+    <fragment
+            android:id="@+id/emailVerificationFragment"
+            android:name="com.ibt.ava.view.ui.fragment.EmailVerificationFragment"
+            android:label="EmailVerificationFragment"
+            tools:layout="@layout/layout_email_verification">
+        <action
+                android:id="@+id/action_emailVerificationFragment_to_navigation_home"
+                app:destination="@id/navigation_home"
+                app:enterAnim="@anim/slide_up"
+                app:exitAnim="@anim/slide_down"
+                app:popEnterAnim="@anim/slide_up"
+                app:popExitAnim="@anim/slide_down" />
+        <action
+                android:id="@+id/action_emailVerificationFragment_to_resetPasswordFragment"
+                app:destination="@id/resetPasswordFragment" />
+    </fragment>
+    <dialog
+            android:id="@+id/forgotPassword"
+            android:name="com.ibt.ava.view.ui.fragment.ForgotPassword"
+            android:label="ForgotPassword"
+            tools:layout="@layout/layout_forgot_password_email">
+        <action
+                android:id="@+id/action_forgotPassword_to_emailVerificationFragment"
+                app:destination="@id/emailVerificationFragment" />
+    </dialog>
+    <dialog
+            android:id="@+id/resetPasswordFragment"
+            android:name="com.ibt.ava.view.ui.fragment.ResetPasswordFragment"
+            android:label="ResetPasswordFragment"
+            tools:layout="@layout/layout_update_password" />
 
-            android:id="@+id/navigation_atuh" app:startDestination="@id/loginFragment">
-    <fragment android:id="@+id/loginFragment" tools:layout="@layout/layout_login"
-              android:name="com.ibrahim.basicboilerplate.view.fragment.LoginFragment"
-              android:label="LoginFragment">
-        <action android:id="@+id/action_loginFragment_to_emailVerificationFragment"
-                app:destination="@id/emailVerificationFragment"/>
-        <action android:id="@+id/action_loginFragment_to_signupFragment" app:destination="@id/signupFragment"/>
-        <action android:id="@+id/action_loginFragment_to_forgotPassword" app:destination="@id/forgotPassword"/>
-    </fragment>
-    <fragment android:id="@+id/emailVerificationFragment"
-              android:name="com.ibrahim.basicboilerplate.view.fragment.EmailVerificationFragment"
-              tools:layout="@layout/layout_email_verification"
-              android:label="EmailVerificationFragment"/>
-    <fragment android:id="@+id/signupFragment"
-              tools:layout="@layout/layout_signup"
-              android:name="com.ibrahim.basicboilerplate.view.fragment.SignupFragment"
-              android:label="SignupFragment">
-        <action android:id="@+id/action_signupFragment_to_emailVerificationFragment"
-                app:destination="@id/emailVerificationFragment"/>
-    </fragment>
-    <fragment android:id="@+id/forgotPassword" tools:layout="@layout/layout_forgot_password"
-              android:name="com.ibrahim.basicboilerplate.view.fragment.ForgotPassword"
-              android:label="ForgotPassword">
-        <action android:id="@+id/action_forgotPassword_to_resetPassword" app:destination="@id/resetPassword"/>
-    </fragment>
-    <fragment android:id="@+id/resetPassword" tools:layout="@layout/layout_reset_password"
-              android:name="com.ibrahim.basicboilerplate.view.fragment.ResetPassword"
-              android:label="ResetPassword"/>
 </navigation>

@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <com.ibt.ava.util.TouchDetectableScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            android:fillViewport="true"
+            android:orientation="vertical"
+            android:id="@+id/scrollView"
+            android:paddingTop="@dimen/base_padding_top">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:id="@+id/layout_to_hide"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                        android:id="@+id/layout_video"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/base_padding_left"
+                        android:layout_marginEnd="@dimen/base_padding_right"
+                        app:cardCornerRadius="@dimen/_12sdp"
+                        app:cardElevation="0dp">
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                        <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                            <ImageView
+                                    android:id="@+id/image_news_first"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_170sdp"
+                                    android:scaleType="centerCrop"></ImageView>
+
+                            <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_170sdp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/shadow_video"></ImageView>
+                        </FrameLayout>
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_105sdp"
+                                android:background="@drawable/video_text_bg"
+                                android:orientation="vertical"
+                                android:padding="@dimen/_10sdp">
+
+                            <TextView
+                                    android:id="@+id/tv_first_title"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/opensans_semibold"
+                                    android:maxLines="2"
+                                    android:textColor="#ffffff"
+                                    android:ellipsize="end"
+                                    android:textSize="@dimen/normal_title_size"></TextView>
+
+                            <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_2sdp"
+                                    android:orientation="horizontal">
+
+                                <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="1.0"
+                                        android:gravity="end">
+
+                                    <TextView
+                                            android:id="@+id/tv_first_time"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginEnd="@dimen/_7sdp"
+                                            android:fontFamily="@font/opensans_regular"
+
+                                            android:textColor="#ededed"
+                                            android:textSize="@dimen/normal_time_size"></TextView>
+
+                                    <TextView
+                                            android:id="@+id/tv_first_category"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:fontFamily="@font/opensans_semibold"
+                                            android:textColor="#326dfa"
+                                            android:maxLines="1"
+                                            android:ellipsize="end"
+                                            android:textSize="@dimen/normal_category_size"></TextView>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <ImageButton
+                            android:id="@+id/btn_play"
+                            android:layout_width="@dimen/_56sdp"
+                            android:layout_height="@dimen/_56sdp"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="@dimen/_40sdp"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/play_button"></ImageButton>
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                        android:id="@+id/layout_images"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/base_padding_left"
+                        android:layout_marginEnd="@dimen/base_padding_right"
+                        app:cardCornerRadius="@dimen/_12sdp"
+                        app:cardElevation="0dp">
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                        <ImageView
+                                android:id="@+id/image_news_first_image"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_170sdp"
+                                android:scaleType="centerCrop"></ImageView>
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_130sdp"
+                                android:orientation="vertical"
+                                android:padding="@dimen/_10sdp">
+
+                            <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_2sdp"
+                                    android:orientation="horizontal">
+
+                                <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="1.0"
+                                        android:gravity="end"
+                                        android:orientation="horizontal">
+
+                                    <TextView
+                                            android:id="@+id/tv_images_count"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginEnd="@dimen/_7sdp"
+                                            android:fontFamily="@font/opensans_regular"
+                                            android:text="١٢ وێنە"
+                                            android:textColor="#3a465d"
+                                            android:textSize="@dimen/normal_time_size"></TextView>
+
+                                    <ImageView
+                                            android:layout_width="@dimen/_25sdp"
+                                            android:layout_height="@dimen/_25sdp"
+                                            android:layout_gravity="center"
+                                            android:src="@drawable/gallery"></ImageView>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                            <TextView
+                                    android:id="@+id/tv_first_title_images"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/opensans_semibold"
+                                    android:maxLines="2"
+                                    android:ellipsize="end"
+                                    android:textColor="#041343"
+                                    android:textSize="@dimen/normal_title_size"></TextView>
+
+                            <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_2sdp"
+                                    android:orientation="horizontal">
+
+                                <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="1.0"
+                                        android:gravity="end"
+                                        android:orientation="horizontal">
+
+                                    <TextView
+                                            android:id="@+id/tv_first_time_images"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginEnd="@dimen/_7sdp"
+                                            android:fontFamily="@font/opensans_regular"
+
+                                            android:textColor="#8a96ad"
+                                            android:textSize="@dimen/normal_time_size"></TextView>
+
+                                    <TextView
+                                            android:id="@+id/tv_first_category_images"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:fontFamily="@font/opensans_semibold"
+                                            android:maxLines="1"
+                                            android:ellipsize="end"
+                                            android:textColor="#326dfa"
+                                            android:textSize="@dimen/normal_category_size"></TextView>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <View
+                        android:id="@+id/divider"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:layout_marginBottom="@dimen/_3sdp"
+                        android:background="#f4f4f4"
+                        android:layout_marginStart="@dimen/base_padding_left"
+                        android:layout_marginEnd="@dimen/base_padding_right"></View>
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rec_videos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_70sdp"
+                    android:orientation="vertical"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_5sdp"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="2"
+                    tools:itemCount="3"
+                    android:layoutDirection="rtl"
+                    tools:listitem="@layout/layout_all_podcasts_row"></androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+
+    </com.ibt.ava.util.TouchDetectableScrollView>
+</layout>

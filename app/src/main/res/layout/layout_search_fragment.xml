@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/author_status_bg"
+            android:fillViewport="true"
+            android:fitsSystemWindows="true"
+            android:orientation="vertical">
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:id="@+id/layout_settings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                   android:paddingStart="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_5sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:gravity="center|end"
+                    android:orientation="horizontal">
+
+                <Button
+                        android:id="@+id/btn_cancel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="?attr/selectableItemBackground"
+                        android:fontFamily="@font/opensans_medium"
+                        android:text="ڕەتکردنەوە"
+                        android:textAllCaps="false"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/_11sdp"></Button>
+
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_44sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/round_tab_bg"
+                        android:orientation="horizontal">
+
+
+                    <ImageButton
+                            android:id="@+id/btn_cancel_text"
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/search_cancel"></ImageButton>
+
+                    <EditText
+                            android:id="@+id/et_search"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="@dimen/_7sdp"
+                            android:layout_weight="1.0"
+                            android:background="#00000000"
+                            android:fontFamily="@font/opensans_medium"
+                            android:gravity="end"
+                            android:hint="گەڕان"
+                            android:textAlignment="viewEnd"
+                            android:textColor="#ffffff"
+                            android:maxLines="1"
+                            android:lines="1"
+                            android:textColorHint="#677ead"
+                            android:textSize="@dimen/_15sdp"></EditText>
+
+                    <ImageButton
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="@dimen/_13sdp"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/search"></ImageButton>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#ffffff">
+
+                <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rec"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/base_padding_left"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:paddingEnd="@dimen/base_padding_right"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/layout_fifth_row"></androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

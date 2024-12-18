@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+                name="model"
+                type="com.ibt.ava.service.model.StaticCategory" />
+    </data>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/opensans_semibold"
+                android:padding="@dimen/_10sdp"
+                android:text="@{model.name}"
+                android:textColor="#041343"
+                android:textSize="@dimen/list_vertical_title_size"></TextView>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@drawable/divier_asset_details"></View>
+
+    </LinearLayout>
+</layout>

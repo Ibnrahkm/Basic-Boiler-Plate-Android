@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+                name="model"
+                type="com.ibt.ava.service.model.news.home.Data" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/layout_second_section_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:background="#025ade"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/base_padding_left"
+            android:paddingTop="@dimen/base_padding_top"
+            android:paddingEnd="@dimen/base_padding_right"
+            android:paddingBottom="@dimen/base_padding_bottom">
+
+
+        <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|end"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="fitCenter"
+                app:cardBackgroundColor="#326dfa"
+                app:cardCornerRadius="@dimen/_30sdp"
+                app:cardElevation="0dp"
+                app:cardUseCompatPadding="false">
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    android:orientation="horizontal">
+
+                <TextView
+                        android:id="@+id/tv_first_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans_regular"
+                        android:padding="@dimen/_5sdp"
+                        android:text="هه‌واڵی به‌ په‌له‌"
+                        android:textColor="@color/home_top_weather_text"
+                        android:textSize="@dimen/normal_top_first_title_size"></TextView>
+
+                <ImageView
+                        android:id="@+id/radar"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/_4sdp"
+                        android:src="@drawable/radar_second"></ImageView>
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+                android:id="@+id/btn_first_news"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <TextView
+                    android:id="@+id/tv_first_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/normal_title_size"></TextView>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:orientation="horizontal">
+
+                <ImageButton
+                        android:layout_width="@dimen/normal_dot_size_width"
+                        android:layout_height="@dimen/normal_dot_size_height"
+                        android:layout_gravity="center"
+                        android:background="?attr/selectableItemBackground"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/dots"
+                        android:visibility="gone"></ImageButton>
+
+                <TextView
+                        android:id="@+id/tv_first_time"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.0"
+                        android:fontFamily="@font/opensans_regular"
+                        android:textColor="#ededed"
+                        android:textSize="@dimen/normal_time_size"></TextView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="0dp"
+                app:cardPreventCornerOverlap="false">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                <ImageView
+                        android:id="@+id/image_news_first"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"></ImageView>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/layout_first_row"></androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+</layout>

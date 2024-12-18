@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+            android:id="@+id/navigation_home"
+            app:showAsAction="always"
+            android:icon="@drawable/menu_item_home"
+            android:title="@string/title_home" />
+
+    <item
+            android:id="@+id/navigation_vault"
+            android:icon="@drawable/menu_item_vault"
+            app:showAsAction="always"
+            android:title="Transactions" />
+
+    <item
+            android:id="@+id/navigation_transactions"
+            android:icon="@drawable/menu_item_history"
+            app:showAsAction="always"
+            android:title="Profile" />
+
+    <item
+            android:id="@+id/navigation_transfer"
+            android:icon="@drawable/menu_item_transfer"
+            app:showAsAction="always"
+            android:title="Profile" />
+
+
+</menu>

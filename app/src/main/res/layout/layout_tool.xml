@@ -1,0 +1,44 @@
+<LinearLayout android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/_10sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingEnd="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+<ImageView
+        android:id="@+id/iv_tool_left"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:padding="@dimen/_5sdp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/backk"
+        android:tint="@color/toolbar_back_button_tint_color"></ImageView>
+
+<TextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:fontFamily="@font/opensans_bold"
+        android:gravity="center"
+        android:paddingStart="@dimen/_5sdp"
+        android:text="@string/your_vault"
+        android:textColor="@color/toolbar_title_color"
+        android:textSize="@dimen/_18sdp"></TextView>
+
+
+<ImageView
+        android:id="@+id/iv_tool_right"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:padding="@dimen/_3sdp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/search"
+        android:tint="#000"
+        android:visibility="invisible"></ImageView>
+</LinearLayout>

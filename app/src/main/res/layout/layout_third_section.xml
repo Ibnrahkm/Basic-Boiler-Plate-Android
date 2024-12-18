@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+                name="model"
+                type="com.ibt.ava.service.model.news.home.Data" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:background="#ffffff"
+            android:fillViewport="true"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/base_padding_top"
+            android:paddingBottom="@dimen/base_padding_bottom">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/base_padding_left"
+                android:paddingEnd="@dimen/base_padding_right">
+
+            <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_gravity="end"
+                    android:layoutDirection="rtl"
+                    app:tabBackground="@drawable/tab_background"
+                    app:tabGravity="center"
+                    app:tabIndicator="@color/transparent"
+                    app:tabMode="scrollable"
+                    app:tabPaddingEnd="@dimen/_15sdp"
+                    app:tabPaddingStart="@dimen/_15sdp"
+                    app:tabRippleColor="#00000000"
+                    app:tabSelectedTextColor="#ffffff"
+                    app:tabTextAppearance="@style/tab_text"
+                    app:tabTextColor="#041343"></com.google.android.material.tabs.TabLayout>
+
+            <LinearLayout
+                    android:id="@+id/layout_third_section_body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        app:cardCornerRadius="@dimen/_10sdp"
+                        app:cardElevation="0dp">
+
+                    <ImageView
+                            android:id="@+id/image_news_first"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"></ImageView>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:orientation="horizontal">
+
+                    <TextView
+                            android:id="@+id/tv_first_author_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:fontFamily="@font/opensans_semibold"
+                            android:gravity="center"
+                            android:textColor="#041343"
+                            android:textSize="@dimen/normal_author_size"></TextView>
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/iv_author"
+                            android:layout_width="@dimen/normal_author_image_width"
+                            android:layout_height="@dimen/normal_author_image_height"
+                            android:background="?attr/selectableItemBackground"
+                            android:src="@drawable/ava_link"></de.hdodenhof.circleimageview.CircleImageView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    <TextView
+                            android:id="@+id/tv_first_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:fontFamily="@font/opensans_semibold"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:textColor="#041343"
+                            android:textSize="@dimen/normal_title_size"></TextView>
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:orientation="horizontal">
+
+                        <ImageButton
+                                android:layout_width="@dimen/normal_dot_size_width"
+                                android:layout_height="@dimen/normal_dot_size_height"
+                                android:layout_gravity="center"
+                                android:background="?attr/selectableItemBackground"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/dots"
+                                android:visibility="gone"></ImageButton>
+
+                        <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1.0"
+                                android:gravity="end">
+
+                            <TextView
+                                    android:id="@+id/tv_first_time"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginEnd="@dimen/_7sdp"
+                                    android:fontFamily="@font/opensans_regular"
+                                    android:textColor="#8a96ad"
+                                    android:textSize="@dimen/normal_time_size"></TextView>
+
+                            <TextView
+                                    android:id="@+id/tv_first_category"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/opensans_semibold"
+                                    android:textColor="#326dfa"
+                                    android:maxLines="1"
+                                    android:ellipsize="end"
+                                    android:textSize="@dimen/normal_category_size"></TextView>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:background="#f4f4f4"></View>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/_5sdp"
+                android:paddingEnd="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rec"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="2"
+                    android:layoutDirection="rtl"
+                    tools:listitem="@layout/layout_third_tab_data_row"></androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/mobile_navigation"
+        app:startDestination="@+id/navigation_home">
+
+    <fragment
+            android:id="@+id/navigation_home"
+            android:name="com.ibt.ava.view.ui.fragment.HomeFragment"
+            android:label="@string/title_home"
+            tools:layout="@layout/fragment_home" />
+    <fragment
+            android:id="@+id/categoriesFragment"
+            android:name="com.ibt.ava.view.ui.fragment.CategoriesFragment"
+            android:label="CategoriesFragment"
+            tools:layout="@layout/layout_categories" />
+    <fragment
+            android:id="@+id/multimediaFragment"
+            android:name="com.ibt.ava.view.ui.fragment.MultimediaFragment"
+            android:label="MultimediaFragment"
+            tools:layout="@layout/layout_multimedia_fragment" />
+    <fragment
+            android:id="@+id/profileFragment"
+            android:name="com.ibt.ava.view.ui.fragment.ProfileFragment"
+            android:label="ProfileFragment"
+            tools:layout="@layout/layout_profile">
+        <action
+                android:id="@+id/action_profileFragment_to_securityFragment"
+                app:destination="@id/securityFragment"
+                app:enterAnim="@anim/slide_up"
+                app:exitAnim="@anim/slide_down"
+                app:popEnterAnim="@anim/slide_up"
+                app:popExitAnim="@anim/slide_down"></action>
+        <action
+                android:id="@+id/action_profileFragment_to_manageAccountFragment"
+                app:destination="@id/manageAccountFragment"
+                app:enterAnim="@anim/slide_up"
+                app:exitAnim="@anim/slide_down"
+                app:popEnterAnim="@anim/slide_up"
+                app:popExitAnim="@anim/slide_down" />
+        <action
+                android:id="@+id/action_profileFragment_to_notificationSettingsFragment"
+                app:destination="@id/notificationSettingsFragment"
+                app:enterAnim="@anim/slide_up"
+                app:exitAnim="@anim/slide_down"
+                app:popEnterAnim="@anim/slide_up"
+                app:popExitAnim="@anim/slide_down"
+                />
+        <action
+                app:enterAnim="@anim/slide_up"
+                app:exitAnim="@anim/slide_down"
+                app:popEnterAnim="@anim/slide_up"
+                app:popExitAnim="@anim/slide_down"
+                android:id="@+id/action_profileFragment_to_manageUpdatePasswordFragment"
+                app:destination="@id/manageUpdatePasswordFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/securityFragment"
+            android:name="com.ibt.ava.view.ui.fragment.SecurityFragment"
+            android:label="SecurityFragment"
+            tools:layout="@layout/layout_security">
+        <action
+                android:id="@+id/action_securityFragment_to_manageUpdateEmailFragment"
+                app:destination="@id/manageUpdateEmailFragment"
+                app:enterAnim="@anim/slide_up"
+                app:exitAnim="@anim/slide_down"
+                app:popEnterAnim="@anim/slide_up"
+                app:popExitAnim="@anim/slide_down" />
+        <action
+                android:id="@+id/action_securityFragment_to_manageUpdatePasswordFragment"
+                app:destination="@id/manageUpdatePasswordFragment"
+                app:enterAnim="@anim/slide_up"
+                app:exitAnim="@anim/slide_down"
+                app:popEnterAnim="@anim/slide_up"
+                app:popExitAnim="@anim/slide_down" />
+    </fragment>
+    <fragment
+            android:id="@+id/manageUpdateEmailFragment"
+            android:name="com.ibt.ava.view.ui.fragment.ManageUpdateEmailFragment"
+            android:label="ManageUpdateEmailFragment"
+            tools:layout="@layout/layout_update_email" />
+    <fragment
+            android:id="@+id/manageUpdatePasswordFragment"
+            android:name="com.ibt.ava.view.ui.fragment.ManageUpdatePasswordFragment"
+            android:label="ManageUpdatePasswordFragment"
+            tools:layout="@layout/layout_update_password" />
+    <fragment
+            android:id="@+id/manageAccountFragment"
+            android:name="com.ibt.ava.view.ui.fragment.ManageAccountFragment"
+            android:label="ManageAccountFragment"
+            tools:layout="@layout/layout_manage_account" />
+    <fragment
+            android:id="@+id/bookmarkFollowFragment"
+            tools:layout="@layout/layout_bookmark_follow_fragment"
+            android:name="com.ibt.ava.view.ui.fragment.BookmarkFollowFragment"
+            android:label="BookmarkFollowFragment" />
+    <fragment
+            android:id="@+id/notificationSettingsFragment"
+            tools:layout="@layout/layout_notification_settings"
+            android:name="com.ibt.ava.view.ui.fragment.NotificationSettingsFragment"
+            android:label="NotificationSettingsFragment" />
+    <fragment
+            android:id="@+id/notificationFragment"
+            tools:layout="@layout/layout_notifications"
+            android:name="com.ibt.ava.view.ui.fragment.NotificationFragment"
+            android:label="NotificationFragment" />
+</navigation>

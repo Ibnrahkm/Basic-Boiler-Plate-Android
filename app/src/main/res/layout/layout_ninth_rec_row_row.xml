@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+                name="model"
+                type="com.ibt.ava.service.model.news.home.Featurednews" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:id="@+id/layout_to_matchparent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp">
+
+        <FrameLayout
+                android:layout_width="@dimen/_250sdp"
+                android:id="@+id/layout_to_match_parent"
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_120sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:background="@drawable/rec_bg"
+                    android:gravity="bottom"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_7sdp"
+                        android:fontFamily="@font/opensans_semibold"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:text="@{model.title}"
+                        android:textColor="#041343"
+                        android:textSize="@dimen/list_vertical_title_size"></TextView>
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/layout_author"
+                        android:layout_gravity="bottom|start"
+                        android:layout_margin="@dimen/_5sdp">
+
+
+                    <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:orientation="horizontal">
+                        <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="@dimen/normal_author_image_original_width"
+                                android:layout_height="@dimen/normal_author_image_original_height"
+                                android:layout_gravity="center"
+                                app:src="@{model.author.get(0).avatar}"
+                                android:layout_marginBottom="@dimen/_3sdp"
+                                android:id="@+id/iv_author"
+                                android:src="@drawable/ava_link"></de.hdodenhof.circleimageview.CircleImageView>
+
+                        <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:orientation="vertical">
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start|center"
+                                    android:layout_marginStart="@dimen/_3sdp"
+                                    android:fontFamily="@font/opensans_semibold"
+                                    android:text="@{model.author.get(0).name}"
+                                    android:textColor="#041343"
+                                    android:textSize="@dimen/list_author_size"></TextView>
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start|center"
+                                    android:layout_marginEnd="@dimen/_3sdp"
+                                    android:fontFamily="@font/opensans_regular"
+                                    android:text="@{model.publishedAt}"
+                                    android:textColor="#8a96ad"
+                                    android:textSize="@dimen/list_author_time_size"></TextView>
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:src="@drawable/flowbite"></ImageView>
+        </FrameLayout>
+
+    </LinearLayout>
+
+</layout>

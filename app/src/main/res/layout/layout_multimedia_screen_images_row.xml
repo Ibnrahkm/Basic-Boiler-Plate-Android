@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+                name="model"
+                type="com.ibt.ava.service.model.news.multimedia.Data" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_weight="1.0"
+                app:cardCornerRadius="@dimen/_12sdp"
+                app:cardElevation="0dp">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_70sdp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/demo1"
+                        app:src="@{model.featuredImageUrl}"></ImageView>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_10sdp">
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:orientation="horizontal">
+
+                        <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1.0"
+                                android:gravity="start"
+                                android:orientation="horizontal">
+                            <ImageView
+                                    android:layout_width="@dimen/_15sdp"
+                                    android:layout_height="@dimen/_15sdp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/gallery"></ImageView>
+
+                            <TextView
+                                    android:id="@+id/tv_images_count"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="@dimen/_7sdp"
+                                    android:fontFamily="@font/opensans_regular"
+                                    android:text="١٢ وێنە"
+                                    android:textColor="#3a465d"
+                                    android:textSize="@dimen/list_horizontal_category_size"></TextView>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <TextView
+                            android:id="@+id/tv_first_title_images"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/opensans_semibold"
+                            android:maxLines="2"
+                            android:ellipsize="end"
+                            android:text="@{model.title}"
+                            android:textColor="#041343"
+                            android:textSize="@dimen/list_vertical_title_size"></TextView>
+                    <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|start"
+                            android:gravity="start">
+                        <TextView
+                                android:id="@+id/tv_first_category_images"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:maxLines="1"
+                                android:layout_gravity="center"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/opensans_semibold"
+                                android:text="@{model.primaryCategory.name}"
+                                android:textColor="#326dfa"
+                                android:textSize="@dimen/list_horizontal_category_size"></TextView>
+
+
+
+                        <TextView
+                                android:id="@+id/tv_first_time_images"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:maxLines="1"
+                                android:layout_marginStart="@dimen/_7sdp"
+                                android:fontFamily="@font/opensans_regular"
+                                android:text="@{model.publishedAt}"
+                                android:textColor="#8a96ad"
+                                android:textSize="@dimen/list_horizontal_time_size"></TextView>
+
+                               </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <View
+                android:id="@+id/view"
+                android:layout_width="@dimen/_1sdp"
+                android:visibility="gone"
+                android:layout_height="@dimen/_120sdp"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_7sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_7sdp"
+                android:background="#f4f4f4"></View>
+
+    </LinearLayout>
+</layout>

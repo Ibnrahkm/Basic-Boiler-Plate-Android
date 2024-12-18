@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+                name="model"
+                type="com.ibt.ava.service.model.news.home.Featurednews" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <LinearLayout
+                android:id="@+id/btn_single_news_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:orientation="vertical">
+
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        >
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/opensans_semibold"
+                            android:text="@{model.title}"
+                            android:maxLines="2"
+                            android:ellipsize="end"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/list_vertical_title_size"></TextView>
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_alignParentBottom="true"
+                            android:orientation="horizontal">
+
+                        <ImageButton
+                                android:layout_width="@dimen/list_vertical_dot_width"
+                                android:layout_height="@dimen/list_vertical_dot_height"
+                                android:background="?attr/selectableItemBackground"
+                                android:scaleType="centerCrop"
+                                android:visibility="gone"
+                                android:src="@drawable/dots"></ImageButton>
+
+                        <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+
+                                android:layout_weight="1.0"
+                                android:gravity="end">
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginEnd="@dimen/_7sdp"
+                                    android:fontFamily="@font/opensans_regular"
+                                    android:text="@{model.publishedAt}"
+                                    android:textColor="#ededed"
+                                    android:textSize="@dimen/list_vertical_time_size"></TextView>
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/opensans_semibold"
+                                    android:text="@{model.primaryCategory.name}"
+                                    android:textColor="#ededed"
+                                    android:textSize="@dimen/list_vertical_category_size"></TextView>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    app:cardBackgroundColor="@color/transparent"
+                    app:cardCornerRadius="@dimen/_9sdp"
+                    app:cardElevation="0dp"
+                    app:cardPreventCornerOverlap="false">
+
+                <ImageView
+                        android:id="@+id/tv_second_image"
+                        android:layout_width="@dimen/list_vertical_image_width"
+                        android:layout_height="@dimen/list_vertical_image_height"
+                        android:scaleType="centerCrop"
+                        app:src="@{model.featuredImageUrl}"></ImageView>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:id="@+id/view"
+                android:background="#472a57"></View>
+    </LinearLayout>
+
+</layout>

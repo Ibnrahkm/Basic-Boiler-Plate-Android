@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/author_status_bg"
+        android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_65sdp"
+            android:background="@drawable/author_status_bg"
+            android:fitsSystemWindows="false"
+            android:gravity="center"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:elevation="0dp">
+
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/layout_ham"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:visibility="visible"
+                app:cardBackgroundColor="#00000000"
+                app:cardElevation="0dp"
+                app:cardPreventCornerOverlap="false"
+                app:layout_collapseMode="parallax">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ham"
+                        app:cardBackgroundColor="@color/home_top_weather_bg"
+                        app:cardCornerRadius="@dimen/_30sdp"
+                        app:cardElevation="0dp"
+                        app:cardUseCompatPadding="false">
+
+                    <LinearLayout
+                            android:layout_width="@dimen/_55sdp"
+                            android:layout_height="@dimen/_27sdp"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginEnd="@dimen/_2sdp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                        <TextView
+                                android:id="@+id/tv_weather"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:fontFamily="@font/opensans_regular"
+                                android:textColor="@color/home_top_weather_text"
+                                android:textSize="@dimen/_12sdp"></TextView>
+
+                        <ImageView
+                                android:id="@+id/iv_current_weather"
+                                android:layout_width="@dimen/_17sdp"
+                                android:layout_height="@dimen/_17sdp"
+                                android:scaleType="centerCrop"></ImageView>
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.0"
+                        android:layout_marginEnd="@dimen/_9sdp"
+                        android:src="@drawable/ava"></ImageView>
+
+                <ImageButton
+                        android:id="@+id/btn_ham"
+                        android:layout_width="@dimen/_32sdp"
+                        android:layout_height="@dimen/_32sdp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:padding="@dimen/_2sdp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/search_new"></ImageButton>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/layout_settings"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_gravity="end"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:visibility="gone"
+                app:cardBackgroundColor="#00000000"
+                app:cardElevation="0dp"
+                app:cardPreventCornerOverlap="false"
+                app:layout_collapseMode="parallax">
+
+            <ImageButton
+                    android:id="@+id/btn_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:background="#00000000"
+                    android:padding="@dimen/_6sdp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/profile" />
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/layout_mul"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:visibility="gone"
+                app:cardBackgroundColor="#140FFFFF"
+                app:cardCornerRadius="@dimen/_20sdp"
+                app:cardElevation="0dp"
+                app:cardPreventCornerOverlap="false"
+                app:layout_collapseMode="parallax">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <ImageButton
+                        android:id="@+id/btn_video_tab"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_weight="1.0"
+                        android:background="#00000000"
+                        android:padding="@dimen/_5sdp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/video"></ImageButton>
+
+                <ImageButton
+                        android:id="@+id/btn_image_tab"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_weight="1.0"
+                        android:background="#00000000"
+                        android:padding="@dimen/_5sdp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/images_non" />
+
+                <ImageButton
+                        android:id="@+id/btn_mic_tab"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_weight="1.0"
+                        android:background="#00000000"
+                        android:padding="@dimen/_5sdp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/tab_mic_non" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/layout_bookmark"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:visibility="gone"
+                app:cardBackgroundColor="#140FFFFF"
+                app:cardCornerRadius="@dimen/_20sdp"
+                app:cardElevation="0dp"
+                app:cardPreventCornerOverlap="false"
+                app:layout_collapseMode="parallax">
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <ImageButton
+                        android:id="@+id/btn_bookmark_tab"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_weight="1.0"
+                        android:background="#00000000"
+
+                        android:padding="@dimen/_5sdp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/bookmark"></ImageButton>
+
+                <ImageButton
+                        android:id="@+id/btn_follow_tab"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_weight="1.0"
+                        android:background="#00000000"
+                        android:padding="@dimen/_5sdp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/follow_non" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/layout_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                app:cardBackgroundColor="#00000000"
+                app:cardElevation="0dp"
+                app:cardPreventCornerOverlap="false"
+                app:layout_collapseMode="parallax">
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <TextView
+                        android:id="@+id/tv_category_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/opensans_semibold"
+                        android:gravity="center"
+                        android:text="ئاگادارکردنەوەکان"
+                        android:textColor="#ffffff"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:textSize="@dimen/normal_top_title_size"></TextView>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <fragment
+                android:id="@+id/nav_host_fragment_activity_home"
+                android:name="androidx.navigation.fragment.NavHostFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:defaultNavHost="true"
+                app:navGraph="@navigation/mobile_navigation" />
+    </FrameLayout>
+
+
+    <FrameLayout
+            android:id="@+id/navView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_15sdp">
+
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/nav_bar_bg"></ImageView>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:gravity="center">
+
+                <ImageButton
+                        android:id="@+id/btn_home"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_33sdp"
+                        android:layout_weight="1.0"
+                        android:background="@color/transparent"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/tab_home_n_selected"></ImageButton>
+
+                <ImageButton
+                        android:id="@+id/btn_search"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_33sdp"
+                        android:layout_weight="1.0"
+                        android:background="@color/transparent"
+
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/tab_search_n_selected"></ImageButton>
+
+                <ImageButton
+                        android:id="@+id/btn_video"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_weight="1.0"
+                        android:background="@color/transparent"
+
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/tab_video_n_selected"></ImageButton>
+
+                <ImageButton
+                        android:id="@+id/btn_fab"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_weight="1.0"
+                        android:background="@color/transparent"
+
+
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/tab_fav_n_selected"></ImageButton>
+
+                <ImageButton
+                        android:id="@+id/btn_more"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_weight="1.0"
+                        android:background="@color/transparent"
+
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/tab_more_n_selected"></ImageButton>
+            </LinearLayout>
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

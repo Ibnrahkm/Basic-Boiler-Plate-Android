@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+                name="model"
+                type="com.ibt.ava.service.model.news.home.Data" />
+    </data>
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_350sdp"
+            android:background="@drawable/home_screen_podcast_bg"
+            android:fillViewport="true"
+            android:orientation="vertical"
+            android:id="@+id/layoutTweleveScreenBody"
+
+            android:paddingTop="@dimen/base_padding_top"
+            android:paddingBottom="@dimen/base_padding_bottom">
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:paddingStart="@dimen/base_padding_left"
+                    android:paddingEnd="@dimen/base_padding_right"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:orientation="horizontal">
+
+                <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_weight="1.0"
+                        android:src="@drawable/scoop_line"></ImageView>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans_semibold"
+                        android:text="پۆدکاست"
+                        android:textColor="#ffffff"
+                        android:id="@+id/btn_twelve_section"
+                        android:textSize="@dimen/normal_top_title_size"></TextView>
+            </LinearLayout>
+
+            <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/podcast_row_bg"></ImageView>
+
+                <com.yarolegovich.discretescrollview.DiscreteScrollView
+                        android:id="@+id/picker"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_27sdp"
+                        android:layout_gravity="center"
+                        android:layoutDirection="rtl"
+                        app:dsv_orientation="horizontal"
+                        tools:listitem="@layout/layout_home_screen_podcast_row" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+</layout>
